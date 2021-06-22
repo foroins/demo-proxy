@@ -1,0 +1,30 @@
+version: "3"
+
+services:
+  nginx-proxy:
+    container_name: nginx-proxy
+    ports:
+      - "443:443"
+      - "80:80"
+    depends_on:
+       - www2
+    volumes:
+        - //path local de carpeta de usuario con certificados locales:/usr/share/nginx/html/certs:rw
+        - //path local de carpeta de usuario con archivo "default.conf":/etc/nginx/conf.d/default.conf:rw
+        - //path local de carpeta de usuario con archivo "index.html" c:/etc/nginx/html/:rw
+        - //path local de carpeta de usuario con archivo ".htpasswd":/etc/nginx/.htpasswd:rw
+        - /var/run/docker.sock:/tmp/docker.sock
+    restart: always
+    image: nginx:alpine
+  www2:
+    container_name: web_app
+    ports:
+      - "8280:8280"
+    expose:
+       - "80"
+       - "443"
+    volumes:
+        - //path local de carpeta de usuario con archivo "index.html" dentro de la carpeta "www2":/etc/nginx/html/pacman:rw
+        - //path local de carpeta de usuario con archivo "default_www.conf":/etc/nginx/conf.d/default.conf:rw
+    restart: always
+    image: nginx
