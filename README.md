@@ -13,6 +13,7 @@ Plataforma:
 
 Elementos:
 -Web Server NGINX. https://hub.docker.com/_/nginx
+
 -Archivo tipo .httpasswrd. https://clouding.io/hc/es/articles/360010325199-Proteger-directorios-con-htpasswd-y-htaccess
 
 Variables de entorno:
