@@ -14,6 +14,10 @@ Elementos:
 -Web Server NGINX. https://hub.docker.com/_/nginx
 -Archivo tipo .httpasswrd. https://clouding.io/hc/es/articles/360010325199-Proteger-directorios-con-htpasswd-y-htaccess
 
+Variables:
+-Dentro del archivo de docker-compose.yml editar/sustituir la cadena "path local de carpeta de usuario con archivo" con el path de ubicación de archivos para referencia de volumenes dentro de cada contenedor para edición de archivos locales.Ejemplo:
+    - Para el volumen de la carpeta de certificados "//c/Users/demo/Documents/GitHub/demo/certs:/usr/share/nginx/html/certs:rw"
+    
 Flujo:
 1) Instalar certificados locales (vease carpeta "certificados") con finalidad de prueba para este ambiente demo. Favor de referir:
     -Windows: https://techcommunity.microsoft.com/t5/windows-server-essentials-and/installing-a-self-signed-certificate-as-a-trusted-root-ca-in/ba-p/396105
