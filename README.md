@@ -34,7 +34,7 @@ Flujo:
 4) Petición de navegación por navegador via HTTP hacia localhost.com
 5) Redireccionamiento HTTP--->HTTPS
 6) Ingresar localhost.com/token-estatico (Token estático se provisionara directamente al cliente)
-7) Solicitud autenticacación simple hacia servidor web interno (Credenciales por defecto se proporcionaran directamente al cliente)
+7) Solicitud autenticación simple hacia servidor web interno (Credenciales por defecto se proporcionaran directamente al cliente)
 9) Acceso hacia servidor web interno https://localhost.com/token-estatico
 
 
